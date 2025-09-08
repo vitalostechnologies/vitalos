@@ -90,7 +90,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
           {/* About dropdown */}
           <div className="relative" onMouseEnter={openAbout} onMouseLeave={closeAbout}>
             <button
-              className={`${ITEM_CLASS} gap-1 text-white hover:text-[#50E3C2] font-medium`}
+              className={`${ITEM_CLASS} gap-1 px-2 text-white hover:text-[#50E3C2] font-medium`}
               onClick={() => (isAboutDropdownOpen ? closeAbout() : openAbout())}
               aria-haspopup="menu"
               aria-expanded={isAboutDropdownOpen}
@@ -99,15 +99,15 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
               <ChevronDown size={16} className={`transition-transform mt-px ${isAboutDropdownOpen ? "rotate-180" : ""}`} />
             </button>
             {isAboutDropdownOpen && (
-              <div className="absolute left-0 top-full mt-2 w-56 rounded-md shadow-lg bg-[#1a1a1a] ring-1 ring-white/10">
-                <div className="py-1" role="menu" aria-orientation="vertical">
-                  <NavItem onClick={() => handleNavClick("history")}>History</NavItem>
-                  <NavItem onClick={() => handleNavClick("technology")}>Technology</NavItem>
-                  <NavItem onClick={() => handleNavClick("team")}>Team</NavItem>
-                  <NavItem onClick={() => handleNavClick("careers")}>Careers</NavItem>
-                  <NavItem onClick={() => handleNavClick("culture")}>Culture</NavItem>
-                  <NavItem onClick={() => handleNavClick("specialty")}>Specialty</NavItem>
-                </div>
+              <div className="absolute left-0 top-full mt-2 w-64 rounded-lg shadow-xl bg-[#111] ring-1 ring-white/10 p-1 backdrop-blur-sm">
+                <ul className="py-1 divide-y divide-white/10" role="menu" aria-orientation="vertical">
+                  <li><NavItem onClick={() => handleNavClick("history")}>History</NavItem></li>
+                  <li><NavItem onClick={() => handleNavClick("technology")}>Technology</NavItem></li>
+                  <li><NavItem onClick={() => handleNavClick("team")}>Team</NavItem></li>
+                  <li><NavItem onClick={() => handleNavClick("careers")}>Careers</NavItem></li>
+                  <li><NavItem onClick={() => handleNavClick("culture")}>Culture</NavItem></li>
+                  <li><NavItem onClick={() => handleNavClick("specialty")}>Specialty</NavItem></li>
+                </ul>
               </div>
             )}
           </div>
@@ -115,7 +115,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
           {/* Resources dropdown */}
           <div className="relative" onMouseEnter={openResources} onMouseLeave={closeResources}>
             <button
-              className={`${ITEM_CLASS} gap-1 text-white hover:text-[#50E3C2] font-medium`}
+              className={`${ITEM_CLASS} gap-1 px-2 text-white hover:text-[#50E3C2] font-medium`}
               onClick={() => (isResourcesDropdownOpen ? closeResources() : openResources())}
               aria-haspopup="menu"
               aria-expanded={isResourcesDropdownOpen}
@@ -124,12 +124,12 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
               <ChevronDown size={16} className={`transition-transform mt-px ${isResourcesDropdownOpen ? "rotate-180" : ""}`} />
             </button>
             {isResourcesDropdownOpen && (
-              <div className="absolute left-0 top-full mt-2 w-56 rounded-md shadow-lg bg-[#1a1a1a] ring-1 ring-white/10">
-                <div className="py-1" role="menu" aria-orientation="vertical">
-                  <NavItem onClick={() => handleNavClick("blog")}>Blog</NavItem>
-                  <NavItem onClick={() => handleNavClick("research")}>Research &amp; Publications</NavItem>
-                  <NavItem onClick={() => handleNavClick("case-studies")}>Case Studies</NavItem>
-                </div>
+              <div className="absolute left-0 top-full mt-2 w-64 rounded-lg shadow-xl bg-[#111] ring-1 ring-white/10 p-1 backdrop-blur-sm">
+                <ul className="py-1 divide-y divide-white/10" role="menu" aria-orientation="vertical">
+                  <li><NavItem onClick={() => handleNavClick("blog")}>Blog</NavItem></li>
+                  <li><NavItem onClick={() => handleNavClick("research")}>Research &amp; Publications</NavItem></li>
+                  <li><NavItem onClick={() => handleNavClick("case-studies")}>Case Studies</NavItem></li>
+                </ul>
               </div>
             )}
           </div>
@@ -241,7 +241,7 @@ function NavItem({ onClick, children }: { onClick: () => void; children: React.R
   return (
     <a
       href="#"
-      className="block px-4 py-2 text-sm text-gray-300 hover:bg-[#2a2a2a] hover:text-[#50E3C2]"
+      className="block px-4 py-3 text-[15px] leading-6 text-gray-200 hover:bg-white/5 hover:text-[#50E3C2] transition-colors rounded-md"
       onClick={(e) => { e.preventDefault(); onClick(); }}
       role="menuitem"
     >

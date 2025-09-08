@@ -11,7 +11,8 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
       title="AI that keeps minds well at scale."
       subtitle="Vitalos Technologies leverages AI to provide proactive and personalized mental wellness solutions, revolutionizing healthcare with data-driven insights."
       primaryCta={{ label: "Get Started", onClick: () => setCurrentPage("solutions") }}
-      secondaryCta={{ label: "Explore Our Solutions", onClick: () => setCurrentPage("solutions") }}
+      // ⬇️ This opens the Demo page in your state router
+      secondaryCta={{ label: "Try the Demo", onClick: () => setCurrentPage("demo") }}
     />
 
     <section className="py-20 px-6">
@@ -22,6 +23,7 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
             To harness the power of artificial intelligence to create accessible, proactive, and personalized mental health solutions…
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
           <div className="bg-[#1a1a1a] rounded-lg p-8 shadow-xl transition-transform transform hover:-translate-y-2 duration-300 ease-in-out">
             <BarChart2 className="h-12 w-12 text-[#50E3C2] mx-auto mb-4" />
@@ -39,6 +41,16 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
             <p className="text-sm text-gray-400">Our platform is designed to be accessible…</p>
           </div>
         </div>
+
+        {/* Optional callout to the demo, keeps it visible below the fold too */}
+        <div className="mt-12 text-center">
+          <button
+            onClick={() => setCurrentPage("demo")}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#50E3C2] text-black font-semibold hover:bg-[#50E3C2]/90"
+          >
+            Try the Demo
+          </button>
+        </div>
       </div>
     </section>
 
@@ -46,6 +58,7 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold text-white mb-4">Why Vitalos?</h2>
         <p className="text-lg text-gray-400 max-w-3xl mx-auto">Our commitment to leading AI expertise ensures…</p>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
           <div className="group bg-gray-900 rounded-lg p-8 shadow-xl transition-transform hover:-translate-y-2 duration-300">
             <Code className="h-12 w-12 text-[#50E3C2] mx-auto mb-4 group-hover:text-white" />

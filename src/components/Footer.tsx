@@ -1,54 +1,81 @@
 import React from "react";
 import { Twitter, Linkedin } from "lucide-react";
+import type { Page } from "../types";
 
-const Footer: React.FC = () => (
+type FooterProps = {
+  onNavigate: (page: Page) => void;
+  currentPage?: Page;
+};
+
+const Footer: React.FC<FooterProps> = ({ onNavigate, currentPage }) => (
   <footer className="bg-black text-gray-300 py-12 px-6 border-t border-gray-800 font-inter">
-    <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div className="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+      {/* Logo + tagline */}
       <div className="col-span-1">
         <div className="flex items-center space-x-2 mb-4">
           <img src="/vitalos_logo_white.png" alt="Vitalos" className="h-10 w-auto" />
         </div>
         <p className="text-sm">AI that keeps minds well at scale.</p>
         <div className="flex space-x-4 mt-4">
-          <a href="#" aria-label="Twitter" className="text-gray-400 hover:text-[#50E3C2]">
+          <a
+            href="https://twitter.com/vitalos"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            className="text-gray-400 hover:text-[#50E3C2]"
+          >
             <Twitter />
           </a>
-          <a href="#" aria-label="LinkedIn" className="text-gray-400 hover:text-[#50E3C2]">
+          <a
+            href="https://linkedin.com/company/vitalos-technologies"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="text-gray-400 hover:text-[#50E3C2]"
+          >
             <Linkedin />
           </a>
         </div>
       </div>
 
-      <div className="col-span-1">
-        <h4 className="font-bold text-white mb-4">Products</h4>
-        <ul>
-          <li className="mb-2"><a href="#" className="hover:text-[#50E3C2]">Web app</a></li>
-          <li className="mb-2"><a href="#" className="hover:text-[#50E3C2]">iOS app</a></li>
-          <li className="mb-2"><a href="#" className="hover:text-[#50E3C2]">Android app</a></li>
-          <li className="mb-2"><a href="#" className="hover:text-[#50E3C2]">API</a></li>
-        </ul>
-      </div>
+      {/* Solutions */}
+      <FooterCol title="Solutions">
+        <FooterBtn onClick={() => onNavigate("solutions")} active={currentPage === "solutions"}>
+          Overview
+        </FooterBtn>
+        <FooterBtn onClick={() => onNavigate("solutions")} active={currentPage === "solutions"}>
+          Get Started
+        </FooterBtn>
+      </FooterCol>
 
-      <div className="col-span-1">
-        <h4 className="font-bold text-white mb-4">Company</h4>
-        <ul>
-          <li className="mb-2"><a href="#" className="hover:text-[#50E3C2]" onClick={(e)=>e.preventDefault()}>About Us</a></li>
-          <li className="mb-2"><a href="#" className="hover:text-[#50E3C2]" onClick={(e)=>e.preventDefault()}>Careers</a></li>
-          <li className="mb-2"><a href="#" className="hover:text-[#50E3C2]" onClick={(e)=>e.preventDefault()}>Blog</a></li>
-          <li className="mb-2"><a href="#" className="hover:text-[#50E3C2]" onClick={(e)=>e.preventDefault()}>Legal documents</a></li>
-          <li className="mb-2"><a href="#" className="hover:text-[#50E3C2]" onClick={(e)=>e.preventDefault()}>Press</a></li>
-        </ul>
-      </div>
+      {/* About Us */}
+      <FooterCol title="About Us">
+        <FooterBtn onClick={() => onNavigate("history")} active={currentPage === "history"}>History</FooterBtn>
+        <FooterBtn onClick={() => onNavigate("technology")} active={currentPage === "technology"}>Technology</FooterBtn>
+        <FooterBtn onClick={() => onNavigate("team")} active={currentPage === "team"}>Team</FooterBtn>
+        <FooterBtn onClick={() => onNavigate("careers")} active={currentPage === "careers"}>Careers</FooterBtn>
+        <FooterBtn onClick={() => onNavigate("culture")} active={currentPage === "culture"}>Culture</FooterBtn>
+        <FooterBtn onClick={() => onNavigate("specialty")} active={currentPage === "specialty"}>Specialty</FooterBtn>
+      </FooterCol>
 
+      {/* Resources */}
+      <FooterCol title="Resources">
+        <FooterBtn onClick={() => onNavigate("blog")} active={currentPage === "blog"}>Blog</FooterBtn>
+        <FooterBtn onClick={() => onNavigate("research")} active={currentPage === "research"}>Research &amp; Publications</FooterBtn>
+        <FooterBtn onClick={() => onNavigate("case-studies")} active={currentPage === "case-studies"}>Case Studies</FooterBtn>
+      </FooterCol>
+
+      {/* Contact */}
       <div className="col-span-1">
         <h4 className="font-bold text-white mb-4">Contact</h4>
         <p className="text-sm">
-          
           UK Office
           <br />786 Shoreditch High St
           <br />London, UK E1 6JR
           <br /><br />
-          <a href="mailto:hello@vitalos.co.uk" className="hover:text-[#50E3C2]">hello@vitalos.co.uk</a>
+          <a href="mailto:hello@vitalos.co.uk" className="hover:text-[#50E3C2]">
+            hello@vitalos.co.uk
+          </a>
         </p>
       </div>
     </div>
@@ -60,3 +87,37 @@ const Footer: React.FC = () => (
 );
 
 export default Footer;
+
+/* — Helpers — */
+function FooterCol({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div className="col-span-1">
+      <h4 className="font-bold text-white mb-4">{title}</h4>
+      <ul className="space-y-2">{children}</ul>
+    </div>
+  );
+}
+
+function FooterBtn({
+  onClick,
+  children,
+  active,
+}: {
+  onClick: () => void;
+  children: React.ReactNode;
+  active?: boolean;
+}) {
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={onClick}
+        className={`text-left transition-colors ${
+          active ? "text-[#50E3C2]" : "hover:text-[#50E3C2] text-gray-300"
+        }`}
+      >
+        {children}
+      </button>
+    </li>
+  );
+}

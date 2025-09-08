@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import { Compass, MessageCircle, BarChart2 } from "lucide-react";
 import Hero from "../components/Hero"; // ✅ reuse your existing hero
 
+
 const SolutionsPage: React.FC = () => (
   <main className="pt-20 bg-black min-h-screen text-white">
     {/* Hero */}
