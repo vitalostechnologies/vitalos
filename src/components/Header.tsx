@@ -7,6 +7,8 @@ type HeaderProps = {
   onNavigate: (page: Page) => void;
 };
 
+const ITEM_CLASS = "inline-flex items-center h-10 leading-none"; // keeps everything on the same baseline
+
 const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
   // Desktop dropdowns
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
@@ -55,7 +57,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
       <a
         href="#"
         onClick={(e) => { e.preventDefault(); handleNavClick(page); }}
-        className={`font-medium transition-colors duration-300 ${active ? "text-[#50E3C2]" : "text-white hover:text-[#50E3C2]"} ${className}`}
+        className={`${ITEM_CLASS} font-medium transition-colors duration-300 ${active ? "text-[#50E3C2]" : "text-white hover:text-[#50E3C2]"} ${className}`}
         aria-current={active ? "page" : undefined}
       >
         {children}
@@ -75,6 +77,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
               handleNavClick("home");
             }}
             aria-label="Go to Home"
+            className={`${ITEM_CLASS}`}
           >
             <img src="/vitalos_logo_white.png" alt="Vitalos" className="h-10 w-auto" />
           </a>
@@ -85,18 +88,18 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
           <NavLink page="solutions">Solutions</NavLink>
 
           {/* About dropdown */}
-          <div className="relative pb-2" onMouseEnter={openAbout} onMouseLeave={closeAbout}>
+          <div className="relative" onMouseEnter={openAbout} onMouseLeave={closeAbout}>
             <button
-              className="flex items-center gap-1 text-white hover:text-[#50E3C2] font-medium"
+              className={`${ITEM_CLASS} gap-1 text-white hover:text-[#50E3C2] font-medium`}
               onClick={() => (isAboutDropdownOpen ? closeAbout() : openAbout())}
               aria-haspopup="menu"
               aria-expanded={isAboutDropdownOpen}
             >
               About Us
-              <ChevronDown size={16} className={`transition-transform ${isAboutDropdownOpen ? "rotate-180" : ""}`} />
+              <ChevronDown size={16} className={`transition-transform mt-px ${isAboutDropdownOpen ? "rotate-180" : ""}`} />
             </button>
             {isAboutDropdownOpen && (
-              <div className="absolute left-0 top-full w-56 rounded-md shadow-lg bg-[#1a1a1a] ring-1 ring-white/10">
+              <div className="absolute left-0 top-full mt-2 w-56 rounded-md shadow-lg bg-[#1a1a1a] ring-1 ring-white/10">
                 <div className="py-1" role="menu" aria-orientation="vertical">
                   <NavItem onClick={() => handleNavClick("history")}>History</NavItem>
                   <NavItem onClick={() => handleNavClick("technology")}>Technology</NavItem>
@@ -110,18 +113,18 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
           </div>
 
           {/* Resources dropdown */}
-          <div className="relative pb-2" onMouseEnter={openResources} onMouseLeave={closeResources}>
+          <div className="relative" onMouseEnter={openResources} onMouseLeave={closeResources}>
             <button
-              className="flex items-center gap-1 text-white hover:text-[#50E3C2] font-medium"
+              className={`${ITEM_CLASS} gap-1 text-white hover:text-[#50E3C2] font-medium`}
               onClick={() => (isResourcesDropdownOpen ? closeResources() : openResources())}
               aria-haspopup="menu"
               aria-expanded={isResourcesDropdownOpen}
             >
               Resources
-              <ChevronDown size={16} className={`transition-transform ${isResourcesDropdownOpen ? "rotate-180" : ""}`} />
+              <ChevronDown size={16} className={`transition-transform mt-px ${isResourcesDropdownOpen ? "rotate-180" : ""}`} />
             </button>
             {isResourcesDropdownOpen && (
-              <div className="absolute left-0 top-full w-56 rounded-md shadow-lg bg-[#1a1a1a] ring-1 ring-white/10">
+              <div className="absolute left-0 top-full mt-2 w-56 rounded-md shadow-lg bg-[#1a1a1a] ring-1 ring-white/10">
                 <div className="py-1" role="menu" aria-orientation="vertical">
                   <NavItem onClick={() => handleNavClick("blog")}>Blog</NavItem>
                   <NavItem onClick={() => handleNavClick("research")}>Research &amp; Publications</NavItem>
@@ -135,7 +138,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
 
           <button
             onClick={() => handleNavClick("solutions")}
-            className="px-4 py-2 bg-[#50E3C2] text-black font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#50E3C2]/40"
+            className="inline-flex items-center h-10 px-4 bg-[#50E3C2] text-black font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#50E3C2]/40"
           >
             Get Started
           </button>
@@ -145,7 +148,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
         <div className="md:hidden flex-shrink-0">
           <button
             onClick={() => setMobileMenuOpen((v) => !v)}
-            className="text-white focus:outline-none"
+            className={`${ITEM_CLASS} text-white focus:outline-none`}
             aria-label="Toggle Menu"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
@@ -219,7 +222,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
             <li className="pt-2">
               <button
                 onClick={() => handleNavClick("solutions")}
-                className="w-full px-4 py-2 bg-[#50E3C2] text-black font-semibold rounded-full transition-all duration-300 hover:scale-105"
+                className="w-full inline-flex items-center h-10 px-4 bg-[#50E3C2] text-black font-semibold rounded-full transition-all duration-300 hover:scale-105"
               >
                 Get Started
               </button>
