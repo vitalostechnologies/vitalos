@@ -4,6 +4,7 @@ type BlogCardProps = {
   title: string;
   excerpt: string;
   date: string;
+  children: React.ReactNode; // Add this line
   onClick?: () => void;
 };
 

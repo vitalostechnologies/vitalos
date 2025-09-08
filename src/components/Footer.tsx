@@ -43,10 +43,7 @@ const Footer: React.FC = () => (
       <div className="col-span-1">
         <h4 className="font-bold text-white mb-4">Contact</h4>
         <p className="text-sm">
-          US Office
-          <br />1 Dock 72 Wy
-          <br />Brooklyn, NY 11249
-          <br /><br />
+          
           UK Office
           <br />786 Shoreditch High St
           <br />London, UK E1 6JR
