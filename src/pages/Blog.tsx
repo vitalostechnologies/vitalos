@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import BlogCard from "../components/BlogCard";
 import SectionHero from "../components/SectionHero";
 import { BLOG_POSTS } from "../data/blog";
+import Newsletter from "../components/Newsletter";
 
 type Props = { onOpenPost: (slug: string) => void };
 
@@ -105,6 +106,11 @@ const BlogPage: React.FC<Props> = ({ onOpenPost }) => {
           ))}
         </div>
       )}
+      <section className="py-20 px-6">
+  <div className="container mx-auto max-w-3xl">
+    <Newsletter />
+  </div>
+</section>
     </main>
   );
 };

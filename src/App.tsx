@@ -19,7 +19,7 @@ import BlogPage from "./pages/Blog";
 import ResearchPage from "./pages/Research";
 import CaseStudiesPage from "./pages/CaseStudies";
 import ContactPage from "./pages/Contact";
-import BlogPost from "./pages/BlogPost"; // <-- new
+import BlogPost from "./pages/BlogPost"; // full article view
 import DemoPage from "./pages/Demo";
 
 const App: React.FC = () => {
@@ -32,7 +32,6 @@ const App: React.FC = () => {
       <div className="min-h-screen bg-black text-white font-inter">
         <Header currentPage={currentPage} onNavigate={setCurrentPage} />
         {renderPage(currentPage, setCurrentPage, selectedPostSlug, setSelectedPostSlug)}
-        {/* inside your App component render: */}
         <Footer onNavigate={setCurrentPage} currentPage={currentPage} />
       </div>
     </>
@@ -74,6 +73,7 @@ function renderPage(
         <BlogPost
           slug={selectedPostSlug}
           onBack={() => setCurrentPage("blog")}
+          onNavigate={(nextSlug) => setSelectedPostSlug(nextSlug)}
         />
       );
     case "research": return <ResearchPage />;
