@@ -75,7 +75,7 @@ const HistoryPage: React.FC = () => (
         variants={{ show: { transition: { staggerChildren: 0.1 } } }}
         className="space-y-10"
       >
-        {MILESTONES.map((m, i) => (
+        {MILESTONES.map((m) => (
           <motion.li
             key={m.title}
             variants={fadeIn}
