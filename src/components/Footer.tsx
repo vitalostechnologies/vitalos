@@ -75,7 +75,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, currentPage }) => (
           <br />London, EC1N 8DX
           <br /> 02034323640
           
-          
+          <br />
           <br /><a href="mailto:hello@vitalos.co.uk" className="hover:text-[#50E3C2]">
             hello@vitalos.co.uk
           </a>
