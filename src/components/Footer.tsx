@@ -76,7 +76,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, currentPage }) => (
           <br /> 02034323640
           
           
-          <a href="mailto:hello@vitalos.co.uk" className="hover:text-[#50E3C2]">
+          <br /><a href="mailto:hello@vitalos.co.uk" className="hover:text-[#50E3C2]">
             hello@vitalos.co.uk
           </a>
         </p>
