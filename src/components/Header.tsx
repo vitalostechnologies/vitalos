@@ -133,6 +133,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
               </div>
             )}
           </div>
+          <NavLink page="investors">Investors</NavLink>
 
           <NavLink page="contact">Contact</NavLink>
 
@@ -214,6 +215,10 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
                 </ul>
               )}
             </li>
+            <li>
+  <NavLink className="block py-2" page="investors">Investors</NavLink>
+</li>
+
 
             <li>
               <NavLink className="block py-2" page="contact">Contact</NavLink>
