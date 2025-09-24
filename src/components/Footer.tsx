@@ -73,9 +73,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, currentPage }) => (
           Suite 6570, Unit 3A
           <br />34-35 Hatton Garden
           <br />London, EC1N 8DX
-          <br /><br />
-          02034323640
-          br /><br />
+          <br /> 02034323640
+          
+          
           <a href="mailto:hello@vitalos.co.uk" className="hover:text-[#50E3C2]">
             hello@vitalos.co.uk
           </a>
