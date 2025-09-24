@@ -60,6 +60,10 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, currentPage }) => (
 
       {/* Resources */}
       <FooterCol title="Resources">
+        <FooterBtn onClick={() => onNavigate("investors")} active={currentPage === "investors"}>
+  Investors
+</FooterBtn>
+
         <FooterBtn onClick={() => onNavigate("blog")} active={currentPage === "blog"}>Blog</FooterBtn>
         <FooterBtn onClick={() => onNavigate("research")} active={currentPage === "research"}>Research &amp; Publications</FooterBtn>
         <FooterBtn onClick={() => onNavigate("case-studies")} active={currentPage === "case-studies"}>Case Studies</FooterBtn>

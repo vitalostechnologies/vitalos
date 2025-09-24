@@ -13,6 +13,7 @@ export type Page =
   | "blog-post"
   | "research"
   | "case-studies"
+  | "investors"
   | "contact"
   | "demo";
 

@@ -18,6 +18,7 @@ import ResourcesPage from "./pages/Resources";
 import BlogPage from "./pages/Blog";
 import ResearchPage from "./pages/Research";
 import CaseStudiesPage from "./pages/CaseStudies";
+import InvestorsPage from "./pages/Investors";
 import ContactPage from "./pages/Contact";
 import BlogPost from "./pages/BlogPost"; // full article view
 import DemoPage from "./pages/Demo";
@@ -58,6 +59,7 @@ function renderPage(
     case "culture": return <CulturePage />;
     case "specialty": return <SpecialtyPage />;
     case "resources": return <ResourcesPage />;
+    case "investors": return <InvestorsPage />;
     case "demo": return <DemoPage />;
     case "blog":
       return (
