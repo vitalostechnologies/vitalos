@@ -4,11 +4,6 @@ import { AnimatePresence, motion, type Variants, type MotionProps } from "framer
 
 /**
  * INVESTORS PAGE — EMAIL CODE GATE + SLIDES
- * -----------------------------------------
- * Flow:
- * 1) Form → /api/investor-access emails a 6-digit code
- * 2) Verify → /api/investor-verify checks it
- * 3) On success, store local access (30 days) and show slides
  */
 
 const ACCESS_STORAGE_KEY = "vitalos-investors-access";
@@ -20,16 +15,6 @@ const slideFade = (dir: number): MotionProps => ({
   animate: { opacity: 1, x: 0, scale: 1, transition: { duration: 0.45, ease: "easeOut" } },
   exit: { opacity: 0, x: dir > 0 ? -60 : 60, scale: 0.98, transition: { duration: 0.35, ease: "easeIn" } },
 });
-
-const gridStagger: Variants = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.15 } },
-};
-
-const item: Variants = {
-  hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
-};
 
 // ---------- Helpers ----------
 function saveAccess() {
@@ -45,9 +30,6 @@ function hasValidAccess(): boolean {
   } catch {
     return false;
   }
-}
-function clearAccess() {
-  localStorage.removeItem(ACCESS_STORAGE_KEY);
 }
 
 // ---------- UI atoms ----------
@@ -326,7 +308,7 @@ function SliderShell({
 function InvestorsSlides() {
   const [index, setIndex] = useState(0);
 
-  // staggered entrance for the triple-tile slide
+  // keep these scoped so TS knows they're used
   const gridStagger: Variants = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.15 } } };
   const item: Variants = { hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } } };
 
@@ -360,7 +342,7 @@ function InvestorsSlides() {
     <div className="bg-gray-900 rounded-2xl p-6 md:p-8 ring-1 ring-white/10">
       <h3 className="text-2xl md:text-3xl font-bold text-white">The Ask</h3>
       <p className="text-gray-300 mt-3 text-lg">
-        We are raising <span className="text-white font-semibold">£1m</span> to fund 18–24 months of execution.
+        We are raising <span className="text-white font-semibold">£X.Xm</span> to fund 18–24 months of execution.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
         <BigTile eyebrow="Budget" title="40%" sub="Engineering — core product, safety, interop" />
@@ -381,7 +363,6 @@ function InvestorsSlides() {
 
   return <SliderShell slides={slides} index={index} setIndex={setIndex} />;
 }
-
 
 // ---------- Content ----------
 function InvestorsContent() {
