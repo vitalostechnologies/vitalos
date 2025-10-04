@@ -360,7 +360,7 @@ function InvestorsSlides() {
     <div className="bg-gray-900 rounded-2xl p-6 md:p-8 ring-1 ring-white/10">
       <h3 className="text-2xl md:text-3xl font-bold text-white">The Ask</h3>
       <p className="text-gray-300 mt-3 text-lg">
-        We are raising <span className="text-white font-semibold">£X.Xm</span> to fund 18–24 months of execution.
+        We are raising <span className="text-white font-semibold">£1m</span> to fund 18–24 months of execution.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
         <BigTile eyebrow="Budget" title="40%" sub="Engineering — core product, safety, interop" />

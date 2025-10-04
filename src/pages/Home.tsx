@@ -18,11 +18,12 @@ const cardProps = {
 const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
   <main className="pt-20">
     <Hero
-      title="AI that keeps minds well at scale."
-      subtitle="Vitalos delivers predictive screening, smart triage, and clinician tools that make mental healthcare proactive, personalised, and safe."
-      primaryCta={{ label: "Get Started", onClick: () => setCurrentPage("solutions") }}
-      secondaryCta={{ label: "Try the Demo", onClick: () => setCurrentPage("demo") }}
-    />
+  title="AI that keeps minds well at scale."
+  subtitle="Vitalos delivers predictive screening, smart ... that make mental healthcare proactive, personalised, and safe."
+  primaryCta={{ label: "Get Started", onClick: () => setCurrentPage("solutions") }}
+  secondaryCta={{ label: "For investors", onClick: () => setCurrentPage("investors") }}
+/>
+
 
     {/* Mission / Value prop */}
     <section className="py-20 px-6">
