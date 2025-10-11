@@ -4,7 +4,7 @@ import SectionHero from "../components/SectionHero";
 const ResourcesPage: React.FC = () => (
   <main className="pt-20 container mx-auto px-6 py-12 text-center">
    <SectionHero
-  title="About Us"
+  title="Resources"
   subtitle="Learn more about our mission and values"
   heightClass="h-40 md:h-48"
   greenOpacity={0.25}
