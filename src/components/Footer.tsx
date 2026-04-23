@@ -74,10 +74,10 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, currentPage }) => (
         <h4 className="font-bold text-white mb-4">Contact</h4>
         <p className="text-sm">
           UK Office
-          Suite 6570, Unit 3A
-          <br />34-35 Hatton Garden
-          <br />London, EC1N 8DX
-          <br /> 02034323640
+          <br />114 High Street
+          <br />DN5 0AT
+          <br />United Kingdom
+          
           
           <br />
           <br /><a href="mailto:hello@vitalos.co.uk" className="hover:text-[#50E3C2]">
