@@ -22,58 +22,58 @@ const fadeIn = {
 const TechnologyPage: React.FC = () => {
   const cards = [
     {
-      icon: <Cpu className="h-8 w-8 text-black" />,
+      icon: <Cpu className="h-8 w-8 text-white" />,
       title: "AI & Orchestration",
       desc: "LLM + ML ensemble with RAG, guardrails, and human-in-the-loop for safe clinical decisions.",
       hover: "from-purple-500/20 to-purple-700/30",
     },
     {
-      icon: <Server className="h-8 w-8 text-black" />,
+      icon: <Server className="h-8 w-8 text-white" />,
       title: "Microservices on Kubernetes",
       desc: "Containerised services, autoscaling, blue-green deploys, and UK data residency.",
       hover: "from-blue-500/20 to-blue-700/30",
     },
     {
-      icon: <Database className="h-8 w-8 text-black" />,
+      icon: <Database className="h-8 w-8 text-white" />,
       title: "Data Platform",
       desc: "Encrypted lake + warehouse, real-time streaming, ML feature store, and immutable audit logs.",
-      hover: "from-green-500/20 to-green-700/30",
+      hover: "from-white/5 to-black",
     },
     {
-      icon: <ShieldCheck className="h-8 w-8 text-black" />,
+      icon: <ShieldCheck className="h-8 w-8 text-white" />,
       title: "Security & Privacy",
       desc: "TLS/AES-256, RBAC, KMS/HSM, OWASP ASVS, and zero-trust networking.",
       hover: "from-red-500/20 to-red-700/30",
     },
     {
-      icon: <FileText className="h-8 w-8 text-black" />,
+      icon: <FileText className="h-8 w-8 text-white" />,
       title: "Clinical Compliance",
       desc: "NHS DCB0129/0160, GDPR/DPIA, DSPT, ISO 27001, and data minimisation by design.",
       hover: "from-yellow-500/20 to-yellow-700/30",
     },
     {
-      icon: <Link2 className="h-8 w-8 text-black" />,
+      icon: <Link2 className="h-8 w-8 text-white" />,
       title: "Interoperability",
       desc: "FHIR R4, HL7, SNOMED/ICD-10, SMART on FHIR, OAuth2/OIDC.",
       hover: "from-pink-500/20 to-pink-700/30",
     },
     {
-      icon: <Activity className="h-8 w-8 text-black" />,
+      icon: <Activity className="h-8 w-8 text-white" />,
       title: "Observability",
       desc: "OpenTelemetry logging, metrics, tracing, with dashboards and SLO alerts.",
       hover: "from-cyan-500/20 to-cyan-700/30",
     },
     {
-      icon: <GitBranch className="h-8 w-8 text-black" />,
+      icon: <GitBranch className="h-8 w-8 text-white" />,
       title: "MLOps & CI/CD",
       desc: "Model registry, drift monitoring, GitHub Actions, Terraform IaC, reproducible builds.",
       hover: "from-indigo-500/20 to-indigo-700/30",
     },
     {
-      icon: <Cloud className="h-8 w-8 text-black" />,
+      icon: <Cloud className="h-8 w-8 text-white" />,
       title: "Edge & Cloud Flexibility",
       desc: "Hybrid on-prem or UK public cloud, offline-first clients, graceful degradation.",
-      hover: "from-teal-500/20 to-teal-700/30",
+      hover: "from-white/5 to-black",
     },
   ];
 

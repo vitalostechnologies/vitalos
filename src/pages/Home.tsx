@@ -39,7 +39,7 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
         {/* Three pillars drawn from the research: Predict • Support • Safeguard */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
           <motion.div {...cardProps} className="bg-[#1a1a1a] rounded-lg p-8 shadow-xl">
-            <BarChart2 className="h-12 w-12 text-[#50E3C2] mx-auto mb-4" />
+            <BarChart2 className="h-12 w-12 text-white mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">Predict</h3>
             <p className="text-sm text-gray-400">
               Early-risk screening from short check-ins and journals. NLP signals + PHQ-9/GAD-7 style inputs produce transparent risk
@@ -48,7 +48,7 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
           </motion.div>
 
           <motion.div {...cardProps} className="bg-[#1a1a1a] rounded-lg p-8 shadow-xl">
-            <Users className="h-12 w-12 text-[#50E3C2] mx-auto mb-4" />
+            <Users className="h-12 w-12 text-white mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">Support</h3>
             <p className="text-sm text-gray-400">
               Smart triage to evidence-based pathways, psychoeducation nudges, and relapse-prevention plans. Crisis cues escalate to
@@ -57,7 +57,7 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
           </motion.div>
 
           <motion.div {...cardProps} className="bg-[#1a1a1a] rounded-lg p-8 shadow-xl">
-            <Globe className="h-12 w-12 text-[#50E3C2] mx-auto mb-4" />
+            <Globe className="h-12 w-12 text-white mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">Safeguard</h3>
             <p className="text-sm text-gray-400">
               Privacy-first architecture, audit trails, and bias monitoring. Built for interoperability (FHIR/HL7) so data flows to your
@@ -69,7 +69,7 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
         <div className="mt-12 text-center">
           <button
             onClick={() => setCurrentPage("demo")}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#50E3C2] text-black font-semibold hover:bg-[#50E3C2]/90"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-black text-white font-semibold hover:bg-black/90"
           >
             Try the Demo
           </button>
@@ -87,7 +87,7 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
           <motion.div {...cardProps} className="group bg-gray-900 rounded-lg p-8 shadow-xl">
-            <Code className="h-12 w-12 text-[#50E3C2] mx-auto mb-4 group-hover:text-white" />
+            <Code className="h-12 w-12 text-white mx-auto mb-4 group-hover:text-white" />
             <h3 className="text-xl font-semibold text-white mb-2">Clinician Copilot</h3>
             <p className="text-sm text-gray-400">
               Summaries, risk cues, and suggested next steps compiled into clear notes—cutting paperwork and cognitive load while keeping
@@ -96,7 +96,7 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
           </motion.div>
 
           <motion.div {...cardProps} className="group bg-gray-900 rounded-lg p-8 shadow-xl">
-            <BarChart2 className="h-12 w-12 text-[#50E3C2] mx-auto mb-4 group-hover:text-white" />
+            <BarChart2 className="h-12 w-12 text-white mx-auto mb-4 group-hover:text-white" />
             <h3 className="text-xl font-semibold text-white mb-2">Scalable & Reliable</h3>
             <p className="text-sm text-gray-400">
               Cloud-native, privacy-by-design. Role-based access, encryption in transit/at rest, and observability for safe deployment at
@@ -105,7 +105,7 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
           </motion.div>
 
           <motion.div {...cardProps} className="group bg-gray-900 rounded-lg p-8 shadow-xl">
-            <Star className="h-12 w-12 text-[#50E3C2] mx-auto mb-4 group-hover:text-white" />
+            <Star className="h-12 w-12 text-white mx-auto mb-4 group-hover:text-white" />
             <h3 className="text-xl font-semibold text-white mb-2">Outcomes That Matter</h3>
             <p className="text-sm text-gray-400">
               Track symptom change, adherence, and time-to-care. Service dashboards reveal bottlenecks and equity gaps to improve access.
@@ -131,7 +131,7 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button
               onClick={() => setCurrentPage("demo")}
-              className="px-6 py-3 rounded-xl bg-[#50E3C2] text-black font-semibold hover:bg-[#50E3C2]/90"
+              className="px-6 py-3 rounded-xl bg-black text-white font-semibold hover:bg-black/90"
             >
               Launch Demo
             </button>
@@ -149,3 +149,4 @@ const HomePage: React.FC<PageProps> = ({ setCurrentPage }) => (
 );
 
 export default HomePage;
+

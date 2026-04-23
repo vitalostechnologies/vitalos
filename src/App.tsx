@@ -11,10 +11,8 @@ import SolutionsPage from "./pages/Solutions";
 import AboutPage from "./pages/About";
 import HistoryPage from "./pages/History";
 import TechnologyPage from "./pages/Technology";
-import TeamPage from "./pages/Team";
 import CareersPage from "./pages/Careers";
-import CulturePage from "./pages/Culture";
-import SpecialtyPage from "./pages/Specialty";
+import CareersSuccessPage from "./pages/CareersSuccess";
 import ResourcesPage from "./pages/Resources";
 import BlogPage from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
@@ -31,10 +29,8 @@ const pathToPage = (path: string): Page => {
     case "/about": return "about";
     case "/history": return "history";
     case "/technology": return "technology";
-    case "/team": return "team";
     case "/careers": return "careers";
-    case "/culture": return "culture";
-    case "/specialty": return "specialty";
+    case "/careers-success": return "careers-success";
     case "/resources": return "resources";
     case "/blog": return "blog";
     case "/research": return "research";
@@ -52,10 +48,8 @@ const pageToPath = (p: Page): string => {
     case "about": return "/about";
     case "history": return "/history";
     case "technology": return "/technology";
-    case "team": return "/team";
     case "careers": return "/careers";
-    case "culture": return "/culture";
-    case "specialty": return "/specialty";
+    case "careers-success": return "/careers-success";
     case "resources": return "/resources";
     case "blog": return "/blog";
     case "research": return "/research";
@@ -109,10 +103,10 @@ const App: React.FC = () => {
       case "about": return <AboutPage />;
       case "history": return <HistoryPage />;
       case "technology": return <TechnologyPage />;
-      case "team": return <TeamPage />;
-      case "careers": return <CareersPage />;
-      case "culture": return <CulturePage />;
-      case "specialty": return <SpecialtyPage />;
+      case "careers":
+        return <CareersPage onApplicationSuccess={() => setCurrentPage("careers-success")} />;
+      case "careers-success":
+        return <CareersSuccessPage onNavigate={setCurrentPage} />;
       case "resources": return <ResourcesPage />;
       case "blog":
         return (

@@ -22,7 +22,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, currentPage }) => (
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"
-            className="text-gray-400 hover:text-[#50E3C2]"
+            className="text-gray-400 hover:text-white"
           >
             <Twitter />
           </a>
@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, currentPage }) => (
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-gray-400 hover:text-[#50E3C2]"
+            className="text-gray-400 hover:text-white"
           >
             <Linkedin />
           </a>
@@ -52,10 +52,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, currentPage }) => (
       <FooterCol title="About Us">
         <FooterBtn onClick={() => onNavigate("history")} active={currentPage === "history"}>History</FooterBtn>
         <FooterBtn onClick={() => onNavigate("technology")} active={currentPage === "technology"}>Technology</FooterBtn>
-        <FooterBtn onClick={() => onNavigate("team")} active={currentPage === "team"}>Team</FooterBtn>
         <FooterBtn onClick={() => onNavigate("careers")} active={currentPage === "careers"}>Careers</FooterBtn>
-        <FooterBtn onClick={() => onNavigate("culture")} active={currentPage === "culture"}>Culture</FooterBtn>
-        <FooterBtn onClick={() => onNavigate("specialty")} active={currentPage === "specialty"}>Specialty</FooterBtn>
       </FooterCol>
 
       {/* Resources */}
@@ -80,7 +77,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, currentPage }) => (
           
           
           <br />
-          <br /><a href="mailto:hello@vitalos.co.uk" className="hover:text-[#50E3C2]">
+          <br /><a href="mailto:hello@vitalos.co.uk" className="hover:text-white">
             hello@vitalos.co.uk
           </a>
         </p>
@@ -120,7 +117,7 @@ function FooterBtn({
         type="button"
         onClick={onClick}
         className={`text-left transition-colors ${
-          active ? "text-[#50E3C2]" : "hover:text-[#50E3C2] text-gray-300"
+          active ? "text-white" : "hover:text-white text-gray-300"
         }`}
       >
         {children}
@@ -128,3 +125,4 @@ function FooterBtn({
     </li>
   );
 }
+

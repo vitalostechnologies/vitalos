@@ -59,7 +59,7 @@ const ContactPage: React.FC = () => {
 
       <div className="mx-auto max-w-xl">
         {status === "success" && (
-          <div className="mb-4 rounded-lg border border-green-700/40 bg-green-900/20 px-4 py-3 text-green-200">
+          <div className="mb-4 rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-white/90">
             Message sent. We’ll get back to you shortly.
           </div>
         )}

@@ -60,13 +60,13 @@ const Newsletter: React.FC = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@example.com"
-          className="flex-1 rounded-xl bg-black/40 border border-white/10 px-4 py-2 outline-none focus:border-[#50E3C2]"
+          className="flex-1 rounded-xl bg-black/40 border border-white/10 px-4 py-2 outline-none focus:border-white/30"
           aria-label="Email address"
         />
         <button
           type="submit"
           disabled={busy}
-          className="px-5 py-2 rounded-xl bg-[#50E3C2] text-black font-semibold disabled:opacity-50"
+          className="px-5 py-2 rounded-xl bg-black text-white font-semibold disabled:opacity-50"
         >
           {busy ? "Submitting…" : "Subscribe"}
         </button>
@@ -80,3 +80,4 @@ const Newsletter: React.FC = () => {
 };
 
 export default Newsletter;
+

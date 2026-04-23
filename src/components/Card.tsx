@@ -6,7 +6,7 @@ const Card: React.FC<{
   children: React.ReactNode;
 }> = ({ icon, title, children }) => (
   <div className="bg-[#1a1a1a] rounded-lg p-8 shadow-xl">
-    <div className="flex items-center justify-center h-16 w-16 bg-[#50E3C2] rounded-full mb-6">
+    <div className="flex items-center justify-center h-16 w-16 bg-black rounded-full mb-6 ring-1 ring-white/10">
       {icon}
     </div>
     <h3 className="text-2xl font-bold mb-2">{title}</h3>
@@ -15,3 +15,4 @@ const Card: React.FC<{
 );
 
 export default Card;
+

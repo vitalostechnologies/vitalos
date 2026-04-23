@@ -114,7 +114,7 @@ export default function Hero({ title, subtitle, primaryCta, secondaryCta }: Hero
           {primaryCta && (
             <button
               onClick={primaryCta.onClick}
-              className="px-8 py-3 bg-[#50E3C2] text-black font-semibold rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#50E3C2]/40"
+              className="px-8 py-3 bg-black text-white font-semibold rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-black/40"
             >
               {primaryCta.label}
             </button>
@@ -122,7 +122,7 @@ export default function Hero({ title, subtitle, primaryCta, secondaryCta }: Hero
           {secondaryCta && (
             <button
               onClick={secondaryCta.onClick}
-              className="px-8 py-3 bg-transparent text-[#50E3C2] font-semibold border-2 border-[#50E3C2] rounded-full text-lg transition-all duration-300 hover:scale-105 hover:bg-[#50E3C2] hover:text-black"
+              className="px-8 py-3 bg-transparent text-white font-semibold border-2 border-white/20 rounded-full text-lg transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white"
             >
               {secondaryCta.label}
             </button>
@@ -251,7 +251,7 @@ function AuroraBackground({ blobARef, blobBRef, blobCRef }: AuroraBackgroundProp
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(1200px 600px at 50% 0%, rgba(80,227,194,0.2), transparent 60%), radial-gradient(1200px 600px at 50% 100%, rgba(80,227,194,0.12), transparent 60%)",
+              "radial-gradient(1200px 600px at 50% 0%, rgba(255,255,255,0.08), transparent 60%), radial-gradient(1200px 600px at 50% 100%, rgba(255,255,255,0.05), transparent 60%)",
           }}
         />
 
@@ -261,7 +261,7 @@ function AuroraBackground({ blobARef, blobBRef, blobCRef }: AuroraBackgroundProp
             ref={blobARef}
             className="absolute w-[55vw] h-[55vw] top-[-10%] left-[-10%] rounded-full blur-[90px] opacity-50"
             style={{
-              background: "radial-gradient(closest-side, rgba(80,227,194,0.9), rgba(80,227,194,0.15), transparent 70%)",
+              background: "radial-gradient(closest-side, rgba(0,0,0,0.9), rgba(255,255,255,0.08), transparent 70%)",
               animation: "driftA 18s ease-in-out infinite alternate, shimmer 6s ease-in-out infinite",
               filter: "saturate(150%)",
             }}
@@ -322,7 +322,7 @@ function HoloGrid({ gridRef }: HoloGridProps) {
             className="absolute inset-0"
             style={{
               backgroundImage:
-                "linear-gradient(rgba(80,227,194,0.3), rgba(80,227,194,0.3)), repeating-linear-gradient(to right, rgba(255,255,255,0.12) 0, rgba(255,255,255,0.12) 1px, transparent 1px, transparent 48px), repeating-linear-gradient(to top, rgba(255,255,255,0.12) 0, rgba(255,255,255,0.12) 1px, transparent 1px, transparent 48px)",
+                "linear-gradient(rgba(255,255,255,0.08), rgba(255,255,255,0.08)), repeating-linear-gradient(to right, rgba(255,255,255,0.12) 0, rgba(255,255,255,0.12) 1px, transparent 1px, transparent 48px), repeating-linear-gradient(to top, rgba(255,255,255,0.12) 0, rgba(255,255,255,0.12) 1px, transparent 1px, transparent 48px)",
               backgroundBlendMode: "soft-light, normal, normal",
               transform: "perspective(900px) rotateX(45deg)",
               transformOrigin: "50% 100%",
@@ -336,7 +336,7 @@ function HoloGrid({ gridRef }: HoloGridProps) {
           className="absolute inset-x-0 top-0 h-full"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(80,227,194,0) 0%, rgba(80,227,194,0.25) 50%, rgba(80,227,194,0) 100%)",
+              "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0) 100%)",
             mixBlendMode: "screen",
             animation: "scan 5.5s linear infinite",
           }}
@@ -345,3 +345,4 @@ function HoloGrid({ gridRef }: HoloGridProps) {
     </>
   );
 }
+

@@ -78,7 +78,7 @@ const Testimonials: React.FC = () => {
               key={i}
               onClick={() => setIdx(i)}
               aria-label={`Go to testimonial ${i + 1}`}
-              className={`h-2 w-2 rounded-full ${i === idx ? "bg-[#50E3C2]" : "bg-white/20"}`}
+              className={`h-2 w-2 rounded-full ${i === idx ? "bg-black" : "bg-white/20"}`}
             />
           ))}
         </div>
@@ -88,3 +88,4 @@ const Testimonials: React.FC = () => {
 };
 
 export default Testimonials;
+

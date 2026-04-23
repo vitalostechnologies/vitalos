@@ -12,7 +12,7 @@ type BlogCardProps = {
 const BlogCard: React.FC<BlogCardProps> = ({ title, excerpt, date, onClick, tags, cover }) => {
   return (
     <article
-      className="rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:bg-white/10 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#50E3C2]"
+      className="rounded-2xl border border-white/10 overflow-hidden bg-white/5 hover:bg-white/10 transition cursor-pointer focus:outline-none focus:ring-2 focus:ring-white/30"
       onClick={onClick}
       role={onClick ? "button" : undefined}
       tabIndex={onClick ? 0 : undefined}
@@ -48,10 +48,11 @@ const BlogCard: React.FC<BlogCardProps> = ({ title, excerpt, date, onClick, tags
           </div>
         )}
 
-        <span className="mt-4 inline-block text-[#50E3C2]">Read more →</span>
+        <span className="mt-4 inline-block text-white">Read more →</span>
       </div>
     </article>
   );
 };
 
 export default BlogCard;
+

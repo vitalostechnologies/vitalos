@@ -57,7 +57,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
       <a
         href="#"
         onClick={(e) => { e.preventDefault(); handleNavClick(page); }}
-        className={`${ITEM_CLASS} font-medium transition-colors duration-300 ${active ? "text-[#50E3C2]" : "text-white hover:text-[#50E3C2]"} ${className}`}
+        className={`${ITEM_CLASS} font-medium transition-colors duration-300 ${active ? "text-white" : "text-white hover:text-white"} ${className}`}
         aria-current={active ? "page" : undefined}
       >
         {children}
@@ -90,7 +90,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
           {/* About dropdown */}
           <div className="relative" onMouseEnter={openAbout} onMouseLeave={closeAbout}>
             <button
-              className={`${ITEM_CLASS} gap-1 px-2 text-white hover:text-[#50E3C2] font-medium`}
+              className={`${ITEM_CLASS} gap-1 px-2 text-white hover:text-white font-medium`}
               onClick={() => (isAboutDropdownOpen ? closeAbout() : openAbout())}
               aria-haspopup="menu"
               aria-expanded={isAboutDropdownOpen}
@@ -103,10 +103,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
                 <ul className="py-1 divide-y divide-white/10" role="menu" aria-orientation="vertical">
                   <li><NavItem onClick={() => handleNavClick("history")}>History</NavItem></li>
                   <li><NavItem onClick={() => handleNavClick("technology")}>Technology</NavItem></li>
-                  <li><NavItem onClick={() => handleNavClick("team")}>Team</NavItem></li>
                   <li><NavItem onClick={() => handleNavClick("careers")}>Careers</NavItem></li>
-                  <li><NavItem onClick={() => handleNavClick("culture")}>Culture</NavItem></li>
-                  <li><NavItem onClick={() => handleNavClick("specialty")}>Specialty</NavItem></li>
                 </ul>
               </div>
             )}
@@ -115,7 +112,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
           {/* Resources dropdown */}
           <div className="relative" onMouseEnter={openResources} onMouseLeave={closeResources}>
             <button
-              className={`${ITEM_CLASS} gap-1 px-2 text-white hover:text-[#50E3C2] font-medium`}
+              className={`${ITEM_CLASS} gap-1 px-2 text-white hover:text-white font-medium`}
               onClick={() => (isResourcesDropdownOpen ? closeResources() : openResources())}
               aria-haspopup="menu"
               aria-expanded={isResourcesDropdownOpen}
@@ -139,7 +136,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
 
           <button
             onClick={() => handleNavClick("solutions")}
-            className="inline-flex items-center h-10 px-4 bg-[#50E3C2] text-black font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#50E3C2]/40"
+            className="inline-flex items-center h-10 px-4 bg-white text-black font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/20"
           >
             Get Started
           </button>
@@ -176,7 +173,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
             {/* Mobile About */}
             <li>
               <button
-                className="w-full flex items-center justify-between text-left text-white hover:text-[#50E3C2] py-2"
+                className="w-full flex items-center justify-between text-left text-white hover:text-white py-2"
                 onClick={() => setMobileAboutOpen((v) => !v)}
                 aria-expanded={mobileAboutOpen}
                 aria-controls="mobile-about-submenu"
@@ -188,10 +185,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
                 <ul id="mobile-about-submenu" className="ml-4 mt-1 space-y-1">
                   <MobileSubItem onClick={() => handleNavClick("history")}>History</MobileSubItem>
                   <MobileSubItem onClick={() => handleNavClick("technology")}>Technology</MobileSubItem>
-                  <MobileSubItem onClick={() => handleNavClick("team")}>Team</MobileSubItem>
                   <MobileSubItem onClick={() => handleNavClick("careers")}>Careers</MobileSubItem>
-                  <MobileSubItem onClick={() => handleNavClick("culture")}>Culture</MobileSubItem>
-                  <MobileSubItem onClick={() => handleNavClick("specialty")}>Specialty</MobileSubItem>
                 </ul>
               )}
             </li>
@@ -199,7 +193,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
             {/* Mobile Resources */}
             <li>
               <button
-                className="w-full flex items-center justify-between text-left text-white hover:text-[#50E3C2] py-2"
+                className="w-full flex items-center justify-between text-left text-white hover:text-white py-2"
                 onClick={() => setMobileResourcesOpen((v) => !v)}
                 aria-expanded={mobileResourcesOpen}
                 aria-controls="mobile-resources-submenu"
@@ -227,7 +221,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
             <li className="pt-2">
               <button
                 onClick={() => handleNavClick("solutions")}
-                className="w-full inline-flex items-center h-10 px-4 bg-[#50E3C2] text-black font-semibold rounded-full transition-all duration-300 hover:scale-105"
+                className="w-full inline-flex items-center h-10 px-4 bg-black text-white font-semibold rounded-full transition-all duration-300 hover:scale-105"
               >
                 Get Started
               </button>
@@ -246,7 +240,7 @@ function NavItem({ onClick, children }: { onClick: () => void; children: React.R
   return (
     <a
       href="#"
-      className="block px-4 py-3 text-[15px] leading-6 text-gray-200 hover:bg-white/5 hover:text-[#50E3C2] transition-colors rounded-md"
+      className="block px-4 py-3 text-[15px] leading-6 text-gray-200 hover:bg-white/5 hover:text-white transition-colors rounded-md"
       onClick={(e) => { e.preventDefault(); onClick(); }}
       role="menuitem"
     >
@@ -260,7 +254,7 @@ function MobileSubItem({ onClick, children }: { onClick: () => void; children: R
     <li>
       <a
         href="#"
-        className="block px-4 py-2 text-sm text-gray-300 hover:text-[#50E3C2]"
+        className="block px-4 py-2 text-sm text-gray-300 hover:text-white"
         onClick={(e) => { e.preventDefault(); onClick(); }}
       >
         {children}
@@ -268,3 +262,4 @@ function MobileSubItem({ onClick, children }: { onClick: () => void; children: R
     </li>
   );
 }
+

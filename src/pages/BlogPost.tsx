@@ -87,7 +87,7 @@ const BlogPost: React.FC<Props> = ({ slug, onBack, onNavigate }) => {
     return (
       <main className="pt-20 container mx-auto px-6 py-12">
         <SectionHero title="Blog" subtitle="Post not found" />
-        <button onClick={onBack} className="text-[#50E3C2] hover:underline">← Back to Blog</button>
+        <button onClick={onBack} className="text-white hover:underline">← Back to Blog</button>
       </main>
     );
   }
@@ -134,7 +134,7 @@ const BlogPost: React.FC<Props> = ({ slug, onBack, onNavigate }) => {
           <span className="ml-auto flex items-center gap-4">
   <button
     onClick={handleShare}
-    className="text-[#50E3C2] hover:text-white transition-colors"
+    className="text-white hover:text-white transition-colors"
     aria-label="Share or Copy Link"
   >
     <Share2 size={20} />
@@ -144,7 +144,7 @@ const BlogPost: React.FC<Props> = ({ slug, onBack, onNavigate }) => {
     target="_blank"
     rel="noopener"
     aria-label="Share on Twitter"
-    className="text-[#50E3C2] hover:text-white transition-colors"
+    className="text-white hover:text-white transition-colors"
   >
     <Twitter size={20} />
   </a>
@@ -153,7 +153,7 @@ const BlogPost: React.FC<Props> = ({ slug, onBack, onNavigate }) => {
     target="_blank"
     rel="noopener"
     aria-label="Share on LinkedIn"
-    className="text-[#50E3C2] hover:text-white transition-colors"
+    className="text-white hover:text-white transition-colors"
   >
     <Linkedin size={20} />
   </a>
@@ -173,9 +173,9 @@ const BlogPost: React.FC<Props> = ({ slug, onBack, onNavigate }) => {
   className="prose prose-invert max-w-3xl
              prose-headings:scroll-mt-24
              prose-h1:text-white prose-h2:text-white prose-h3:text-gray-100
-             prose-a:text-[#50E3C2] prose-a:no-underline hover:prose-a:underline
+             prose-a:text-white prose-a:no-underline hover:prose-a:underline
              prose-strong:text-white
-             prose-blockquote:border-[#50E3C2]/40 prose-blockquote:text-gray-200
+             prose-blockquote:border-white/20/40 prose-blockquote:text-gray-200
              prose-hr:border-white/10
              prose-li:marker:text-white/40
              prose-code:bg-white/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
@@ -217,7 +217,7 @@ const BlogPost: React.FC<Props> = ({ slug, onBack, onNavigate }) => {
   )}
 
   <div className="mt-10">
-    <button onClick={onBack} className="text-[#50E3C2] hover:underline">← All Blog posts</button>
+    <button onClick={onBack} className="text-white hover:underline">← All Blog posts</button>
   </div>
 </motion.article>
 
@@ -257,7 +257,7 @@ const BlogPost: React.FC<Props> = ({ slug, onBack, onNavigate }) => {
                     aria-label="Previous article"
                   >
                     <div className="text-xs uppercase tracking-wide text-gray-400">Previous</div>
-                    <div className="text-[#50E3C2] hover:underline">{prev.title}</div>
+                    <div className="text-white hover:underline">{prev.title}</div>
                   </button>
                 )}
                 {next && (
@@ -267,7 +267,7 @@ const BlogPost: React.FC<Props> = ({ slug, onBack, onNavigate }) => {
                     aria-label="Next article"
                   >
                     <div className="text-xs uppercase tracking-wide text-gray-400">Next</div>
-                    <div className="text-[#50E3C2] hover:underline">{next.title}</div>
+                    <div className="text-white hover:underline">{next.title}</div>
                   </button>
                 )}
               </div>
@@ -280,3 +280,4 @@ const BlogPost: React.FC<Props> = ({ slug, onBack, onNavigate }) => {
 };
 
 export default BlogPost;
+

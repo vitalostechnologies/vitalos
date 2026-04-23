@@ -180,7 +180,7 @@ const DemoChat: React.FC = () => {
       {/* Header */}
       <div className="flex items-center justify-between px-5 py-3 border-b border-white/10">
         <div className="flex items-center gap-3">
-          <div className="h-2.5 w-2.5 rounded-full bg-[#50E3C2] animate-pulse" />
+          <div className="h-2.5 w-2.5 rounded-full bg-black animate-pulse" />
           <p className="text-sm text-white/80">Vitalos Wellness Demo</p>
         </div>
         <div className="flex items-center gap-2">
@@ -210,7 +210,7 @@ const DemoChat: React.FC = () => {
               className={[
                 "max-w-[85%] rounded-2xl px-4 py-3 text-sm whitespace-pre-wrap",
                 m.role === "user"
-                  ? "bg-[#50E3C2]/20 border border-[#50E3C2]/30"
+                  ? "bg-white/5 border border-white/15"
                   : m.role === "system"
                   ? "bg-yellow-500/10 border border-yellow-500/30"
                   : "bg-white/5 border border-white/10",
@@ -259,13 +259,13 @@ const DemoChat: React.FC = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Type how you’re feeling…"
-            className="flex-1 rounded-xl bg-black/40 border border-white/10 px-4 py-2 outline-none focus:border-[#50E3C2]"
+            className="flex-1 rounded-xl bg-black/40 border border-white/10 px-4 py-2 outline-none focus:border-white/30"
             aria-label="Message"
           />
           <button
             type="submit"
             disabled={!canSend}
-            className="px-4 py-2 rounded-xl bg-[#50E3C2] text-black font-semibold disabled:opacity-40"
+            className="px-4 py-2 rounded-xl bg-black text-white font-semibold disabled:opacity-40"
             aria-label="Send"
           >
             Send
@@ -280,3 +280,4 @@ const DemoChat: React.FC = () => {
 };
 
 export default DemoChat;
+

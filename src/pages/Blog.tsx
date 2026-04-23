@@ -52,7 +52,7 @@ const BlogPage: React.FC<Props> = ({ onOpenPost }) => {
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Search posts…"
-            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-2 outline-none focus:border-[#50E3C2]"
+            className="w-full rounded-xl bg-white/5 border border-white/10 px-4 py-2 outline-none focus:border-white/30"
           />
         </div>
 
@@ -63,7 +63,7 @@ const BlogPage: React.FC<Props> = ({ onOpenPost }) => {
             className={`px-3 py-1 rounded-full border transition ${
               activeTag
                 ? "border-white/10 bg-white/5 hover:border-white/20"
-                : "border-[#50E3C2]/60 bg-[#50E3C2]/10"
+                : "border-white/20 bg-white/5"
             }`}
           >
             All
@@ -74,7 +74,7 @@ const BlogPage: React.FC<Props> = ({ onOpenPost }) => {
               onClick={() => setActiveTag(t === activeTag ? null : t)}
               className={`px-3 py-1 rounded-full border transition ${
                 t === activeTag
-                  ? "border-[#50E3C2]/60 bg-[#50E3C2]/10"
+                  ? "border-white/20 bg-white/5"
                   : "border-white/10 bg-white/5 hover:border-white/20"
               }`}
             >
@@ -116,3 +116,4 @@ const BlogPage: React.FC<Props> = ({ onOpenPost }) => {
 };
 
 export default BlogPage;
+

@@ -19,7 +19,7 @@ const SectionHero: React.FC<SectionHeroProps> = ({
 }) => {
   // clamp opacity to safe range
   const op = Math.max(0, Math.min(1, greenOpacity));
-  const gradient = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(80,227,194,${op}) 50%, rgba(0,0,0,1) 100%)`;
+  const gradient = `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,${op * 0.2}) 50%, rgba(0,0,0,1) 100%)`;
 
   return (
     <section
@@ -41,9 +41,10 @@ const SectionHero: React.FC<SectionHeroProps> = ({
         ) : null}
       </div>
       {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#50E3C2]/60 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
     </section>
   );
 };
 
 export default SectionHero;
+

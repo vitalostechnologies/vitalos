@@ -4,7 +4,7 @@ import SectionHero from "../components/SectionHero";
 // Simple UI atoms
 const Badge: React.FC<{ children: React.ReactNode; tone?: "green" | "gray" | "blue" }>=({ children, tone = "green" })=> (
   <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold 
-    ${tone === "green" ? "bg-[#50E3C2]/15 text-[#50E3C2]" : tone === "blue" ? "bg-blue-400/10 text-blue-300" : "bg-white/10 text-gray-200"}
+    ${tone === "green" ? "bg-white/5 text-white" : tone === "blue" ? "bg-blue-400/10 text-blue-300" : "bg-white/10 text-gray-200"}
   `}>
     {children}
   </span>
@@ -93,19 +93,19 @@ const CaseStudiesPage: React.FC = () => (
             <Td>Median triage time</Td>
             <Td>7.9 days</Td>
             <Td>5.0 days</Td>
-            <Td><span className="text-emerald-400 font-semibold">−37%</span></Td>
+            <Td><span className="text-white font-semibold">−37%</span></Td>
           </Row>
           <Row>
             <Td>Assessment throughput / week</Td>
             <Td>180</Td>
             <Td>220</Td>
-            <Td className="text-emerald-400 font-semibold">+22%</Td>
+            <Td className="text-white font-semibold">+22%</Td>
           </Row>
           <Row>
             <Td>p95 app latency</Td>
             <Td>1.2s</Td>
             <Td>0.32s</Td>
-            <Td className="text-emerald-400 font-semibold">−73%</Td>
+            <Td className="text-white font-semibold">−73%</Td>
           </Row>
           <Row>
             <Td>Cost per assessment</Td>
@@ -117,7 +117,7 @@ const CaseStudiesPage: React.FC = () => (
             <Td>Clinician CSAT</Td>
             <Td>3.6/5</Td>
             <Td>4.4/5</Td>
-            <Td className="text-emerald-400 font-semibold">+0.8</Td>
+            <Td className="text-white font-semibold">+0.8</Td>
           </Row>
           <Row>
             <Td>Model PPV @ operating point</Td>
@@ -312,3 +312,4 @@ const CaseStudiesPage: React.FC = () => (
 );
 
 export default CaseStudiesPage;
+

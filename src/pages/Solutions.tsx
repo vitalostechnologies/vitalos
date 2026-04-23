@@ -56,35 +56,35 @@ const SolutionsPage: React.FC = () => (
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        <Card icon={<Stethoscope className="h-8 w-8 text-black" />} title="AI Intake & Triage">
+        <Card icon={<Stethoscope className="h-8 w-8 text-white" />} title="AI Intake & Triage">
           Adaptive conversational assessment classifies need and urgency, flags risk, and routes to the right care path.
         </Card>
-        <Card icon={<Brain className="h-8 w-8 text-black" />} title="Personalised Digital Therapy">
+        <Card icon={<Brain className="h-8 w-8 text-white" />} title="Personalised Digital Therapy">
           Dynamic CBT and guided self-care that adapts to progress, preferences, and clinical goals.
         </Card>
-        <Card icon={<Clock className="h-8 w-8 text-black" />} title="Waitlist Support & Monitoring">
+        <Card icon={<Clock className="h-8 w-8 text-white" />} title="Waitlist Support & Monitoring">
           24/7 check-ins, relapse indicators, and escalation alerts while patients await or transition between services.
         </Card>
-        <Card icon={<Users className="h-8 w-8 text-black" />} title="Caregiver & Community Tools">
+        <Card icon={<Users className="h-8 w-8 text-white" />} title="Caregiver & Community Tools">
           Shareable tips, education, and structured support plans to include families and carers in recovery.
         </Card>
-        <Card icon={<BarChart3 className="h-8 w-8 text-black" />} title="Clinician Augmentation">
+        <Card icon={<BarChart3 className="h-8 w-8 text-white" />} title="Clinician Augmentation">
           Auto-summaries, longitudinal trends, and session prep notes reduce admin and improve decision-making.
         </Card>
-        <Card icon={<ShieldCheck className="h-8 w-8 text-black" />} title="Safety, Privacy, Trust">
+        <Card icon={<ShieldCheck className="h-8 w-8 text-white" />} title="Safety, Privacy, Trust">
           UK GDPR, role-based access, audit trails, and human-in-the-loop safeguards. Built for NHS information governance.
         </Card>
       </div>
 
       {/* Keep your original three feature themes visible */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Card icon={<Compass className="h-8 w-8 text-black" />} title="Predictive Analytics">
+        <Card icon={<Compass className="h-8 w-8 text-white" />} title="Predictive Analytics">
           Identify rising-risk cohorts early to prioritise outreach and prevent crises.
         </Card>
-        <Card icon={<MessageCircle className="h-8 w-8 text-black" />} title="Natural Language Understanding">
+        <Card icon={<MessageCircle className="h-8 w-8 text-white" />} title="Natural Language Understanding">
           Extract patterns from notes and conversations to enrich triage and therapy planning.
         </Card>
-        <Card icon={<BarChart2 className="h-8 w-8 text-black" />} title="Personalised Plans">
+        <Card icon={<BarChart2 className="h-8 w-8 text-white" />} title="Personalised Plans">
           Tailored pathways across talking therapy, medication prompts, and lifestyle interventions.
         </Card>
       </div>
@@ -100,16 +100,16 @@ const SolutionsPage: React.FC = () => (
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <Card icon={<MessageCircle className="h-8 w-8 text-black" />} title="1. Engage">
+          <Card icon={<MessageCircle className="h-8 w-8 text-white" />} title="1. Engage">
             Patients self-refer or are invited via link or NHS portal. Conversational intake builds rapport from the start.
           </Card>
-          <Card icon={<Cpu className="h-8 w-8 text-black" />} title="2. Assess">
+          <Card icon={<Cpu className="h-8 w-8 text-white" />} title="2. Assess">
             AI triage scores severity, flags risk, and proposes initial care options for clinician review.
           </Card>
-          <Card icon={<HeartPulse className="h-8 w-8 text-black" />} title="3. Support">
+          <Card icon={<HeartPulse className="h-8 w-8 text-white" />} title="3. Support">
             Personalised digital therapy, routine check-ins, and smart nudges keep patients progressing between sessions.
           </Card>
-          <Card icon={<BarChart3 className="h-8 w-8 text-black" />} title="4. Learn">
+          <Card icon={<BarChart3 className="h-8 w-8 text-white" />} title="4. Learn">
             Outcomes tracked over time feed analytics for service planning and continuous improvement.
           </Card>
         </div>
@@ -210,7 +210,7 @@ const SolutionsPage: React.FC = () => (
           <a
             href="#"
             onClick={(e) => e.preventDefault()}
-            className="px-8 py-3 bg-[#50E3C2] text-black font-semibold rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#50E3C2]/40"
+            className="px-8 py-3 bg-black text-white font-semibold rounded-full text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-black/40"
           >
             Request a Demo
           </a>
@@ -221,3 +221,4 @@ const SolutionsPage: React.FC = () => (
 );
 
 export default SolutionsPage;
+
