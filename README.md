@@ -1,57 +1,51 @@
-# 🌌 Vitalos — AI-Powered Mental Wellness Platform
+# Vitalos Technologies — Website
 
-Vitalos is a next-generation **AI-driven mental wellness platform**.  
-It combines advanced machine learning, emotional sensing, and user-centric design to deliver **proactive, personalized, and scalable** support for mental health.
+Technology consultancy website. Built with Next.js 15 + App Router, Tailwind CSS v4, TypeScript.
 
----
+## Stack
+- **Framework:** Next.js 15.x (App Router, React Server Components)
+- **Language:** TypeScript 5.x (strict mode)
+- **Styling:** Tailwind CSS v4 (CSS-based configuration in `app/globals.css`)
+- **Forms:** React Hook Form + Zod validation
+- **Email:** Resend API
+- **Analytics:** Plausible (privacy-first, no cookie banner needed)
+- **Deployment:** Vercel
 
-## 📸 Screenshots & Demo
+## Local development
 
-<p align="center">
-  <img src="docs/screenshots/hero.png" alt="Vitalos Hero Section" width="800" />
-</p>
+```bash
+npm install
+npm run dev
+```
 
-<p align="center">
-  <img src="docs/screenshots/solutions.png" alt="Solutions Page" width="800" />
-</p>
+Visit [http://localhost:3000](http://localhost:3000).
 
-👉 More screenshots and a live demo coming soon at [vitalos.co.uk](https://vitalos.co.uk)
+## Environment variables
 
----
+Create `.env.local` (already present in repo for development):
 
-## 🚀 Features
+| Variable | Required | Description |
+|---|---|---|
+| `RESEND_API_KEY` | Yes | Resend API key for contact form emails |
+| `CONTACT_TO` | No | Destination email (defaults to `MAIL_TO` then `hello@vitalos.co.uk`) |
+| `MAIL_TO` | No | Fallback destination email |
 
-- 🎯 **AI Diagnostics** — Predictive analytics to detect mental health risks early.  
-- 💬 **Natural Language Processing** — Analyze conversations and notes for emotional insights.  
-- 📊 **Personalized Treatment Plans** — Tailored recommendations for therapy, lifestyle, and wellness.  
-- 🌍 **Global Accessibility** — Scalable infrastructure designed for worldwide reach.  
-- 🔒 **Ethical AI** — Privacy, transparency, and fairness at the core of our models.
+## Deployment
 
----
+Deployed on Vercel. Push to `main` triggers production deploy. Ensure environment variables are set in Vercel project settings.
 
-## 🖥️ Tech Stack
+## Design decisions
 
-- **Frontend:** React (TypeScript), Vite, TailwindCSS  
-- **UI/UX:** Lucide Icons, ShadCN components, Framer Motion  
-- **Architecture:** Component-based, stateful routing (React Hooks)  
-- **Future Backends:** FastAPI / Node.js microservices with Kubernetes + CI/CD pipelines
+- **Dark-first:** No light mode in v1. Documented decision; light mode is in backlog.
+- **No UI library:** All components hand-rolled for maximum control and minimal JS.
+- **Plausible analytics:** Privacy-preserving analytics — no cookie banner required.
+- **Font:** Inter (body) + Inter Tight (headings) + JetBrains Mono (code/tags) — all via `next/font`.
 
----
+## Assets needed
 
-🤝 Contributing
-We welcome contributions! Please fork this repo, create a feature branch, and submit a PR.
-For major changes, open an issue to discuss first.
+- `public/og.png` — 1200×630 branded OG image (navy background, Vitalos wordmark, tagline). Not yet provided.
+- Founder photo for About page — not yet provided.
 
-📜 License
-This project is licensed under the MIT License.
+## Backlog
 
-🌐 Links
-Website: vitalos.co.uk
-
-LinkedIn: Vitalos Technologies
-
-Twitter: @VitalosAI
-
-💡 Inspiration
-AI that keeps minds well at scale.
-Vitalos is built to bridge the gap between mental health challenges and scalable, ethical AI solutions.
+See `BACKLOG.md`.
